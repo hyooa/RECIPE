@@ -1,5 +1,5 @@
 <?php
-    $conn = mysqli_connect("localhost","hjindo","jj6762^^","hjindo");
+    $conn = mysqli_connect("localhost:3307","hyooa","!a32316849","hjindo");
     $query = "insert into members(`id`, `pw`, `name`, `address`)
     values (
         '{$_POST['userId']}',

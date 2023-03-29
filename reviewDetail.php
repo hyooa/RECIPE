@@ -3,12 +3,12 @@
 
     $mname = $_GET['name'];
     $no = $_GET['no'];
-    $conn = mysqli_connect("localhost","hjindo","jj6762^^","hjindo");
+    $conn = mysqli_connect("localhost:3307","hyooa","!a32316849","hjindo");
     $query = "select * from review where no={$no}";
     $result = mysqli_query($conn,$query);
     $row = mysqli_fetch_array($result);
 
-    $conn1 = mysqli_connect("localhost","hjindo","jj6762^^","hjindo");
+    $conn1 = mysqli_connect("localhost:3307","hyooa","!a32316849","hjindo");
     $query1 = "select * from recipe where mname='{$mname}'";
     $result1 = mysqli_query($conn1,$query1);
     $row1 = mysqli_fetch_array($result1);

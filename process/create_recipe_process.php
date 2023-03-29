@@ -25,7 +25,7 @@
         }
      } // 사진 업로드
 
-     $conn = mysqli_connect("localhost","hjindo","jj6762^^","hjindo");
+     $conn = mysqli_connect("localhost:3307","hyooa","!a32316849","hjindo");
      $query = "insert into recipe(`mname`, `readyt`, `ingredient`, `playt`, `strength`, `sns`, `desc1`, `desc2`, `mainimg`, `dtailimg`,`topimg`)
              values('{$_POST['mname']}', {$_POST['readyt']}, '{$_POST['ingred']}',
              {$_POST['playt']}, {$_POST['strength']}, '{$_POST['sns']}', '{$_POST['desc1']}','{$_POST['desc2']}',

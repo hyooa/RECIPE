@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","hjindo","jj6762^^","hjindo");
+    $conn = mysqli_connect("localhost:3307","hyooa","!a32316849","hjindo");
 $query = "INSERT INTO `test`.`notice` (`id`, `date`, `title`, `content`)
 values(
     '{$_POST['id']}',

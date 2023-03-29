@@ -13,7 +13,8 @@
     <div id="wrap">
         <header>
                 <div id="header_top">
-                <a href="/php/RECIPE2/startpage.php"><img src="/php/RECIPE2/imgs/logo.PNG" alt=""></a>
+                <a href="/php/RECIPE2/index.php"><img src="/php/RECIPE2/imgs/logo.PNG" alt=""></a>
+                <!-- <a href="/php/RECIPE2/startpage.php"><img src="/php/RECIPE2/imgs/logo.PNG" alt=""></a> -->
                     <div id="search">
                       
                     <form action="/php/RECIPE2/search.php" >

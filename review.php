@@ -2,7 +2,7 @@
 <?php
         define($total,0);
 
-        $conn = mysqli_connect("localhost","hjindo","jj6762^^","hjindo");
+        $conn = mysqli_connect("localhost:3307","hyooa","!a32316849","hjindo");
         $query = "select * from review";
         $result = mysqli_query($conn,$query);
 
@@ -31,6 +31,7 @@
 
         $start = ($page-1)*$list_num;
 
+        
         $sql = "select * from review limit $start, $list_num;";
         $result2 = mysqli_query($conn,$sql);
 
