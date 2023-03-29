@@ -2,7 +2,7 @@
 <?php
     
         function printList(){
-            $conn = mysqli_connect("localhost:3307","hyooa","!a32316849","hjindo");
+            $conn = mysqli_connect("localhost:3307","hyooa","a32316849^^","hjindo");
             $query = "select * from recipe where best = 2";
             $result = mysqli_query($conn,$query);
             for($i=0; $i<6; $i++){

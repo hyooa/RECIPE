@@ -3,7 +3,7 @@
 <?php
         define($total,0);
         session_start();
-        $conn = mysqli_connect("localhost:3307","hyooa","!a32316849","hjindo");
+        $conn = mysqli_connect("localhost:3307","hyooa","a32316849^^","hjindo");
         $query = "select * from notice";
         $result = mysqli_query($conn,$query);
         //페이징 관련 변수
