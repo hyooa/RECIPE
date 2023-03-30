@@ -16,7 +16,7 @@
             }
         } // Best recipe 사진6장 넣기
         function printList2(){
-            $conn = mysqli_connect("localhost:3307","hyooa","a32316849^^","hjindo");
+            $conn2 = mysqli_connect("localhost:3307","hyooa","a32316849^^","hjindo");
         $query2 = "select * from recipe where best = 1";
         $result2 = mysqli_query($conn2,$query2);
         for($i=0; $i<6; $i++){
