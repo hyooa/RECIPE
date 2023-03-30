@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost:3307","hyooa","a32316849^^","hjindo");
+$conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
 $query = "delete from notice where no='{$_POST['no']}'";
 $result = mysqli_query($conn, $query);
 

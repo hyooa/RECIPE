@@ -1,7 +1,7 @@
 <?php
 
 $revNo = $_GET['no'];
-$conn = mysqli_connect("localhost:3307","hyooa","a32316849^^","hjindo");
+$conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
 $query = "delete from myrecipe where no={$revNo}";
 $result = mysqli_query($conn,$query);
 echo $query;

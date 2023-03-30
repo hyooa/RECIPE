@@ -2,7 +2,7 @@
 
     session_start();
 
-    $conn = mysqli_connect("localhost:3307","hyooa","a32316849^^","hjindo");
+    $conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
     $query = "select * from members where id='{$_POST['userId']}'";
     $result = mysqli_query($conn, $query);
 

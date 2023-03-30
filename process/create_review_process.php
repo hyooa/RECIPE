@@ -6,7 +6,7 @@ if($_SESSION['userId']){
     history.back(1);
     </script>";  
 }
-$conn = mysqli_connect("localhost:3307","hyooa","a32316849^^","hjindo");
+$conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
 $query = "INSERT INTO review (`recipe`, `title`, `id`,`date`, `content`)
 values(
 '{$_POST['recipe']}',
