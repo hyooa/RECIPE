@@ -2,7 +2,7 @@
 <?php
     session_start();
     $id = $_SESSION['userId'];
-     $conn = mysqli_connect("localhost","root","3333","hjindo");
+    $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
      $query = "select * from review where id = '$id'";
      $result = mysqli_query($conn,$query);
      function review(){
