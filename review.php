@@ -2,7 +2,7 @@
 <?php
         define($total,0);
 
-        $conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
+        $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
         $query = "select * from review";
         $result = mysqli_query($conn,$query);
 

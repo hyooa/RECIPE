@@ -1,7 +1,7 @@
 <?php  include_once 'include/header.php';     ?>
 
 <?php
-    $conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
+    $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
     $query = "select * from notice where id='{$_GET['id']}'";
     $result = mysqli_query($conn,$query);
     $row = mysqli_fetch_array($result);

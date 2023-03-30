@@ -10,7 +10,7 @@
 
     function printList(){
         global $searchname;
-        $conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
+        $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
         $query = "select * from recipe where sns like '%".$searchname."%' or mname like '%".$searchname."%' group by mname";
         $result = mysqli_query($conn,$query);
       

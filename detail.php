@@ -2,7 +2,7 @@
 <?php
     session_start();
     $mname = $_GET['mname'];
-    $conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
+    $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
     $query = "select * from recipe where mname='{$mname}'";
     $result = mysqli_query($conn,$query);
     $row = mysqli_fetch_array($result);

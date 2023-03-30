@@ -1,7 +1,7 @@
 <?php
 
 var_dump($_POST);
-$conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
+$conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
 $query = "update notice
         set
         `title` = '{$_POST['title']}',

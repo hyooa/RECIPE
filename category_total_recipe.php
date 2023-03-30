@@ -7,7 +7,7 @@
 
     function printList(){
         global $searchname;
-        $conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
+        $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
         $query = "select * from recipe";
         $result = mysqli_query($conn,$query);
       

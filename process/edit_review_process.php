@@ -2,7 +2,7 @@
 
 var_dump($_POST);
 $revNo = $_POST['no'];
-$conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
+$conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
 $query = "update review
         set
         `title` = '{$_POST['title']}',

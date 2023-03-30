@@ -2,7 +2,7 @@
 session_start();
 $revNo = $_POST['mname'];
 $no = $_POST['delno'];
-$conn = mysqli_connect("localhost","hyooa","a32316849^^","hjindo");
+$conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
 $query = "select * from review where no={$no}";
 
 $result = mysqli_query($conn,$query);
