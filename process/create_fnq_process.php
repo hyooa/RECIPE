@@ -1,6 +1,6 @@
 <?php
     $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
-$query = "INSERT INTO `notice` (`id`, `date`, `title`, `content`)
+$query = "INSERT INTO `fnq` (`id`, `date`, `title`, `content`)
 values(
     '{$_POST['id']}',
     '{$_POST['date']}',
@@ -13,11 +13,11 @@ var_dump ($query);
 $result = mysqli_query($conn,$query);
 
 if($result){
-    echo "공지 작성했습니다.";
+    echo "fnq 작성했습니다.";
 }else{
-    echo "공지 작성을 실패했습니다.";
+    echo "fnq 작성을 실패했습니다.";
 }
 
-header('Location:/php/RECIPE2/notice.php');
+header('Location:/php/RECIPE2/F&Q.php');
 
 ?>

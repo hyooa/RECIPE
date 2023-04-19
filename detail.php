@@ -7,8 +7,9 @@
     $result = mysqli_query($conn,$query);
     $row = mysqli_fetch_array($result);
 
+    $conn1 = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
     $query1 = "select * from myrecipe where mname='{$mname}'";
-    $result1 = mysqli_query($conn,$query1);
+    $result1 = mysqli_query($conn1,$query1);
     $row1 = mysqli_fetch_array($result1);
 
 ?>
@@ -65,19 +66,32 @@
                 </ul>
             </div>
             <div id="heart_div">
-                <a href="./writeReview.php?id=<?=$row['mname']?>"><p id="heart1"></p></a>
-                <a href="./writeReview.php?id=<?=$row['mname']?>"><div id='review'>리뷰 작성</div></a>
-                <a href="./process/create_myrecipe_process.php?mname=<?=$row['mname']?>&id=<?=$_SESSION['userId']?>&jpg=<?=$row['topimg']?>"><p id="heart2"></p></a>
-                <?php
-                if($_SESSION){
-                if($mname == $row1['mname']) {
-               echo "<a href='./process/delete_myrecipe_process.php?no={$row1['no']}&id={$_SESSION['userId']}&jpg={$row['topimg']}'><p id='heart2'><div id='review1'>찜❤취소</div></a>";
-                }else{
-                    echo "<a href='./process/create_myrecipe_process.php?mname={$row['mname']}&id={$_SESSION['userId']}&jpg={$row['topimg']}'><p id='heart2'><div id='review1'>찜❤하기</div></a>";
-                }}else{
-                    echo "<a href='./member/login.php'><p id='heart2'><div id='review1'>로그인</div></a>"; 
-                }
                 
+                    <a href="./writeReview.php?id=<?=$row['mname']?>" class="one">
+                        <p id="heart1">
+                            <div id='review'>리뷰 작성</div>
+                        </p>
+                    </a>
+                <?php
+                if($_SESSION['userId']) {
+                    if ($mname == $row1['mname']) {
+                        echo "<a href='./process/delete_myrecipe_process.php?no={$row1['no']}&id={$_SESSION['userId']}&jpg={$row['topimg']}'>
+                            <p id='heart2'>
+                                <div id='review1'>찜❤취소</div>
+                            </p>
+                        </a>";
+                    }else {
+                        echo "<a href='./process/create_myrecipe_process.php?mname={$row['mname']}&id={$_SESSION['userId']}&jpg={$row['topimg']}'>
+                                <p id='heart2'>
+                                    <div id='review1'>찜❤하기</div>
+                                </p>
+                            </a>";
+                    }
+                }else{
+                    echo "<a href='./member/login.php'><p id='heart2'>
+                            <div id='review1'>로그인</div>
+                        </a>"; 
+                }
                 ?>
             
                 </div>
@@ -117,20 +131,20 @@
         let hyo = document.querySelector('#hyo');
         // 입력할 ul 선택
         if(desc.length > img.length){
-        for(let i=0; i < desc.length; i++){
-            if(img[i]!=null){
-        hyo.innerHTML += "<li><p><img src='./imgs/"+mname+'/'+img[i]+"'></p><p>Step"+(i+1)+"</p><p>"+desc[i]+"</p></li>"
-            }else {
-        hyo.innerHTML += "<li><p>Step"+(i+1)+"</p><p>"+desc[i]+"</p></li>"        
-            }
+            for(let i=0; i < desc.length; i++){
+                if(img[i]!=null){
+                    hyo.innerHTML += "<li><p><img src='./imgs/"+mname+'/'+img[i]+"'></p><p>Step"+(i+1)+"</p><p>"+desc[i]+"</p></li>"
+                }else {
+                    hyo.innerHTML += "<li><p>Step"+(i+1)+"</p><p>"+desc[i]+"</p></li>"        
+                }
         }}else{
             for(let i=0; i < img.length; i++){
                 if(desc[i]!=null){
-        hyo.innerHTML += "<li><p><img src='./imgs/"+mname+'/'+img[i]+"'></p><p>Step"+(i+1)+"</p><p>"+desc[i]+"</p></li>"
-        }else {
-            hyo.innerHTML += "<li><p><img src='./imgs/"+mname+'/'+img[i]+"'></p></li>"    
-        }   
-    }
+                    hyo.innerHTML += "<li><p><img src='./imgs/"+mname+'/'+img[i]+"'></p><p>Step"+(i+1)+"</p><p>"+desc[i]+"</p></li>"
+                }else {
+                    hyo.innerHTML += "<li><p><img src='./imgs/"+mname+'/'+img[i]+"'></p></li>"    
+                }   
+            }
         }
         // 각각 값을 받아와서 입력함
         // 이미지랑 step같은 경우 서로의 길이값을 비교해서 이미지가 클경우

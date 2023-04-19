@@ -23,6 +23,6 @@ if($result){
     echo "게시글 작성을 실패했습니다.";
 }
 
-header('Location:/php/RECIPE2/REVIEW.PHP');
+header('Location:/php/RECIPE2/review.php');
 
 ?>

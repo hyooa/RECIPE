@@ -14,14 +14,13 @@
         <header>
                 <div id="header_top">
                 <a href="/php/RECIPE2/index.php"><img src="/php/RECIPE2/imgs/logo.PNG" alt=""></a>
-                <!-- <a href="/php/RECIPE2/startpage.php"><img src="/php/RECIPE2/imgs/logo.PNG" alt=""></a> -->
                     <div id="search">
                       
                     <form action="/php/RECIPE2/search.php" >
                             <input type="text" name="serch" placeholder="검색어를 입력하세요">
                             <p></p>
                             <button id='hidde' type="submit">검색하기</button>
-</form>
+                    </form>
                         
                     </div>
                     <nav id="member">
@@ -41,12 +40,11 @@
                                         echo "<a href='/php/RECIPE2/process/logout_process.php'>로그아웃</a>
                                         <li><a href='/php/RECIPE2/member/mypage.php?={$_SESSION['userId']}'>마이페이지</a></li>";
                                     } else{
-                                        echo "<a href='/php/RECIPE2/member/login.php'>로그인</a>";
+                                        echo "<a href='/php/RECIPE2/member/login.php'>로그인</a>
+                                        <li><a href='/php/RECIPE2/member/join.php'>회원가입</a></li>";
                                     }      
                                 ?>
                                 </li> 
-                            <li><a href="/php/RECIPE2/member/join.php">회원가입</a></li>
-                            
 
                             <?php if($_SESSION['userId']=='test'){
                             echo "<li><a href='/php/RECIPE2/writerecipe.php'>레시피작성</a></li>";

@@ -985,7 +985,7 @@ footer div:nth-child(4) {
     font-size: 40px;
     z-index: 1;
 }
-#review1{
+#heart2 > #review1{
     position: absolute;
     top: 55px;
     left: 215px;
@@ -1064,16 +1064,7 @@ footer div:nth-child(4) {
 }
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 /* 수정 😊 */
-#heart_div a {
-    position: absolute;
-    top: 220px;
-    right: 350px;
-}
-#heart_div a:nth-child(3) {
-    position: absolute;
-    top: 220px;
-    right: 90px;
-}
+
 /* 하트 1 */
 #heart1 {
     position: relative;
@@ -1088,7 +1079,7 @@ footer div:nth-child(4) {
     top: 0;
     width: 130px;
     height: 190px;
-    background: pink;
+    background: red;
     border-radius: 100px 100px 0 0;
     transform: rotate(-50deg);
     transform-origin: 0 100%;
@@ -1108,11 +1099,11 @@ footer div:nth-child(4) {
   #heart2:after {
     position: absolute;
     content: "";
-    left: 50px;
+    left: 0px;
     top: 0;
     width: 130px;
     height: 190px;
-    background: pink;
+    background-color: rebeccapurple;
     border-radius: 100px 100px 0 0;
     transform: rotate(-50deg);
     transform-origin: 0 100%;

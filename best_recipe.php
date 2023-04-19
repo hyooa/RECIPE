@@ -1,8 +1,6 @@
 <?php  include_once 'include/header.php';     ?>
 
 <?php
-    
-
     $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
         $query = "select * from recipe where best=3";
         $result = mysqli_query($conn,$query);
@@ -12,7 +10,6 @@
         for($i=0; $i<4;$i++){
             $a0[$i] = mysqli_fetch_array($result2);    
         }  
-
 ?>
 
 <div id="best_recipe">

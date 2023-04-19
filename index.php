@@ -1,6 +1,6 @@
 <?php  include_once 'include/header.php';     ?>
 <?php
-    
+        // BEST RECIPE
         function printList(){
             $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
             $query = "select * from recipe where best = 2";
@@ -14,7 +14,7 @@
             </a><p>{$row['mname']}</p></div>
             </li>";
             }
-        } // Best recipe 사진6장 넣기
+        } // 추천 레시피
         function printList2(){
             $conn2 = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
         $query2 = "select * from recipe where best = 1";

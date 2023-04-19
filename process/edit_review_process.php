@@ -22,7 +22,7 @@ if($result){
 
 }
 
-header('Location:/php/RECIPE2/REVIEW.PHP');
+header('Location:/php/RECIPE2/review.php');
 
 
 ?>

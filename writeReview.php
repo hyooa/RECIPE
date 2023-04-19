@@ -7,7 +7,7 @@
     $result = mysqli_query($conn,$query);
     $row = mysqli_fetch_array($result);
     
-    $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
+    $conn1 = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
     $query1 = "select * from recipe where mname='{$mname}'";
     $result1 = mysqli_query($conn1,$query1);
     $row1 = mysqli_fetch_array($result1);
@@ -16,7 +16,6 @@
         echo "<script> alert('로그인 후 이용해주세요.');
         history.back(1);
         </script>";
-       
     }
 
 ?>

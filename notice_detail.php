@@ -2,7 +2,8 @@
 
 <?php
     $conn = mysqli_connect("localhost","hyooa","a32316849^^","hyooa");
-    $query = "select * from notice where id='{$_GET['id']}'";
+    // $query = "select * from notice where id='{$_GET['id']}'";
+    $query = "select * from notice where no='{$_GET['no']}'";
     $result = mysqli_query($conn,$query);
     $row = mysqli_fetch_array($result);
 ?>
