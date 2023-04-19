@@ -975,17 +975,24 @@ footer div:nth-child(4) {
 #text_right {
     position: relative;
 }
-#review{
+#heart_div {
+    background-color: pink;
+    position: relative;
+    top: 200px;
+    left: 0px;
+    display: flex;
+}
+#review, #review1{
     position: absolute;
     top: 55px;
     right: -50px;
     width:200px;
     height:60px;
-    color: white;
+    /* color: white; */
     font-size: 40px;
     z-index: 1;
 }
-#heart2 > #review1{
+/* #heart2 > #review, #review1{
     position: absolute;
     top: 55px;
     left: 215px;
@@ -994,17 +1001,7 @@ footer div:nth-child(4) {
     color: white;
     font-size: 40px;
     z-index: 1;
-}
-#review2{
-    position: absolute;
-    top: 55px;
-    left: 110px;
-    width:200px;
-    height:60px;
-    color: white;
-    font-size: 40px;
-    z-index: 1;
-}
+} */
 #redBox {
     color: #fff;
     width: 500px;
@@ -1064,6 +1061,25 @@ footer div:nth-child(4) {
 }
 /*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
 /* 수정 😊 */
+#heart_div {
+    position: relative;
+    top: 200px;
+    left: 0px;
+    display: flex;
+}
+
+#heart_div > a:first-child {
+    background-color: orange;
+    position: absolute;
+    top: 0;
+    left: 80px;
+}
+#heart_div > a:last-child {
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 380px;
+}
 
 /* 하트 1 */
 #heart1 {
@@ -1079,7 +1095,7 @@ footer div:nth-child(4) {
     top: 0;
     width: 130px;
     height: 190px;
-    background: red;
+    background: pink;
     border-radius: 100px 100px 0 0;
     transform: rotate(-50deg);
     transform-origin: 0 100%;
@@ -1103,7 +1119,7 @@ footer div:nth-child(4) {
     top: 0;
     width: 130px;
     height: 190px;
-    background-color: rebeccapurple;
+    background-color: pink;
     border-radius: 100px 100px 0 0;
     transform: rotate(-50deg);
     transform-origin: 0 100%;
